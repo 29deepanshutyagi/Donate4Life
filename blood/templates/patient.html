@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="static/styles.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <title>Responsive Regisration Form </title>
+</head>
+<body>
+    
+
+
+    <div class="container">
+
+        <header>Registration</header>
+        <form  method="post" action="/patient">
+            {% csrf_token %}
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Date of Birth</label>
+                            <input type="date" name="birthofdate" placeholder="Enter birth date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text"  name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" name="mobilenumber" placeholder="Enter mobile number" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select  id="gender" name="gender"required>
+                                <option disabled selected>Select gender</option>
+                                <option>M</option>
+                                <option>F</option>
+                                <option>O</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text"  name="occupation"placeholder="Enter your ccupation" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="details ID">
+                    <span class="title">Identity Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>ID Type</label>
+                            <input type="text" name="IDtype" placeholder="Enter ID type" required>
+                        </div>
+                        <div class="input-field">
+                            <label>ID Number</label>
+                            <input type="number" name="IDnumber" placeholder="Enter ID number" required>
+                        </div>
+                        <!-- <div class="input-field">
+                            <label>Issued Authority</label>
+                            <input type="text" placeholder="Enter issued authority" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Issued State</label>
+                            <input type="text" placeholder="Enter issued state" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Issued Date</label>
+                            <input type="date" placeholder="Enter your issued date" required> -->
+                        <!-- </div> -->
+                        <div class="input-field">
+                            <label>Expiry Date</label>
+                            <input type="date" name="expirydate" placeholder="Enter expiry date" required>
+                        </div>
+                    </div>
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Address Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Address Type</label>
+                            <input type="text" name="PermanentorTemporary" placeholder="Permanent or Temporary" required>
+                        </div>
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text"  name="state" placeholder="Enter your state" required>
+                        </div>
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" name="district" placeholder="Enter your District" required>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="details family">
+                    <span class="title">Family Details</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Father Name</label>
+                            <input type="text"  name="father"placeholder="Enter father name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mother Name</label>
+                            <input type="text" name="mother" placeholder="Enter mother name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Grandfather</label>
+                            <input type="text" name="grandfather" placeholder="Enter grandfther name" required>
+                        </div>
+                        <!-- <div class="input-field">
+                            <label>Spouse Name</label>
+                            <input type="text" placeholder="Enter spouse name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Father in Law</label>
+                            <input type="text" placeholder="Father in law name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Mother in Law</label>
+                            <input type="text" placeholder="Mother in law name" required>
+                        </div> -->
+                    </div>
+                    <div class="details medical">
+                        <span class="title">Medical Details</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>BLOOD GROUP</label>
+                                {% comment %} <select  id="bloodgroup" name="bloodgroup" required>
+                                    <option disabled selected>Select blood group</option>
+                                    <option>A+</option>
+                                    <option>B+</option>
+                                    <option>AB+</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                    <option>A-</option>
+                                    <option>B-</option>
+                                </select> {% endcomment %}
+                                <!-- <input type="drop" placeholder="" required> -->
+                                <input type="text" name="bloodgroup" placeholder="Enter blood group" required>
+                             </div>
+                            <div class="input-field">
+                                <label>Requirements</label>
+                                <select  id="requirements" id="requirements" required>
+                                    <option disabled selected>Select requirement</option>
+                                    <option>BLOOD</option>
+                                    <option>PLATELETS</option>
+                                    <option>PLASMA</option>
+                                   
+                                </select>
+                                <!-- <input type="text" placeholder="Enter your state" required> -->
+                            </div>
+                            <!-- <div class="input-field">
+                                <label>District</label>
+                                <input type="text" placeholder="Enter your District" required>
+                            </div> -->
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+        {% if messages %}
+        {% for message in messages %}
+        
+            <div id="alert-container"></div>
+        
+            <script>
+                function showAlert(message, type) {
+                    const alertContainer = document.getElementById("alert-container");
+                    const alertDiv = document.createElement("div");
+                    alertDiv.className = `alert ${type}`;
+                    alertDiv.textContent = message;
+                    alertContainer.appendChild(alertDiv);
+                }
+                
+                // Usage example
+                const message = "{{ message }}";
+                const alertType = "{{ alert_type }}";
+                
+                // Call showAlert with the retrieved values
+                showAlert(message, alertType);
+            </script>
+            {% endfor %}
+            {% endif %}
+          {%block body%}
+          {% endblock body%}
+    </div>
+    {% comment %} {% if messages %}
+{% for message in messages %}
+
+    <div id="alert-container"></div>
+
+    <script>
+        function showAlert(message, type) {
+            const alertContainer = document.getElementById("alert-container");
+            const alertDiv = document.createElement("div");
+            alertDiv.className = `alert ${type}`;
+            alertDiv.textContent = message;
+            alertContainer.appendChild(alertDiv);
+        }
+        
+        // Usage example
+        const message = "{{ message }}";
+        const alertType = "{{ alert_type }}";
+        
+        // Call showAlert with the retrieved values
+        showAlert(message, alertType);
+    </script>
+    {% endfor %}
+    {% endif %}
+  {%block body%}
+  {% endblock body%} {% endcomment %}
+    <script src="static/script.js"></script>
+</body>
+</html>

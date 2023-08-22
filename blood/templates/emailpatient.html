@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Application Form Confirmation</title>
+    <link href="https://cdn.tailwindcss.com/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Example: Center the content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: donate-background 10s infinite;
+        }
+
+      /*  @keyframes donate-background {
+            0% {
+                background: linear-gradient(-45deg, #ff0000, rgba(255, 255, 255, 0.01));
+            }
+            50% {
+                background: linear-gradient(-45deg, rgba(255, 255, 255, 0.01), #ff0000);
+            }
+            100% {
+                background: linear-gradient(-45deg, #ff0000, rgba(255, 255, 255, 0.01));
+            }
+        }*/
+
+        /* Rest of the CSS remains the same */
+
+        .motivation {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .donate-btn {
+            display: block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .donate-btn:hover {
+            background-color: #e60000;
+        }
+         h1 {
+            text-align: center;
+            color: #ff0000;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+            color: #888;
+        }
+
+        .confirmation-details {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #ff0000;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li strong {
+            margin-right: 10px;
+        }
+
+        .blood-donation {
+            display: block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff0000;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-3xl font-bold text-red-900">Patient Application Form Confirmation</h1>
+        <p class="font-medium text-red-700">Thank you for submitting your patient application form. Your application has been received, and we will be in touch shortly.</p>
+        <div class="confirmation-details">
+            <h2 class="text-xl font-bold text-red-900">Confirmation Details</h2>
+            <ul class="list-disc list-inside text-red-700">
+                <li><strong>Name:</strong> {{ name }}</li>
+                <li><strong>Date of Birth:</strong> {{ birthofdate }}</li>
+                <li><strong>Email:</strong> {{ email }}</li>
+                <li><strong>Mobile Number:</strong> {{ mobilenumber }}</li>
+                <li><strong>Gender:</strong> {{ gender }}</li>
+                <li><strong>Occupation:</strong> {{ occupation }}</li>
+                <li><strong>Blood Group:</strong> {{ bloodgroup }}</li>
+                <!-- Add more details here -->
+            </ul>
+        </div>
+        <div>
+            <p class="motivation">
+                If you're looking for a way to make a difference in the world, blood donation is a great option. It's a simple, safe, and painless way to save a life.            </p>
+            <a href="#" class="donate-btn">Donate Blood</a>
+        </div>
+    </div>
+</body>
+
+</html>

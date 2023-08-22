@@ -1,0 +1,9 @@
+Patient Application Form ConfirmationThank you for submitting your patient application form. Your application has been received and we will be in touch shortly.
+Name:{{name}}
+Date of Birth: {{birthofdate}}
+Email:{{email}}
+Mobile Number: {{mobilenumber}}
+Gender:{{gender}}
+Occupation: {{occupation}}
+Blood Group:{{bloodgroup}}
+If you're looking for a way to make a difference in the world, blood donation is a great option. It's a simple, safe, and painless way to save a life.
