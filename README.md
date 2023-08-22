@@ -8,3 +8,4 @@
       projects\Scripts\activate
         cd blood
             python manage.py runserver
+
