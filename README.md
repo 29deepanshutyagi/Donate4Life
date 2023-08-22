@@ -3,8 +3,9 @@
  
  to use my code following steps:
 
-   cd Donate4Life
-   python -m venv projects
+   
+  cd Donate4Life
+    python -m venv projects
    projects\Scripts\activate
-   cd blood
-   python manage.py runserver
+      cd blood
+     python manage.py runserver
